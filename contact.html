@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Favour Chidalu | Personal Website</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Favour Chidalu 🤎</h1>
+        <p>MY PERSONAL WEBSITE</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="likes.html">Things I Like</a>
+        <a href="dreams.html">My Dreams</a>
+        <a href="contact.html">Contact Me</a>
+    </nav>
+
+    <div class="welcome-bar">
+        <div class="welcome-text">
+            Welcome to my little corner of the internet!
+            🤎 Dream big, keep faith, and never stop growing.
+        </div>
+    </div>
+
+    <main class="container">
+
+        <section class="card" id="contact">
+            <h2>Contact Me 💌</h2>
+
+            <p>
+                I would love to hear from you!
+                Feel free to reach out, say hello,
+                or share an opportunity with me.
+            </p>
+
+            <div class="contact-info">
+                <strong>Email:</strong>
+                <a href="mailto:Favourogbonna499@gmail.com">
+                    Favourogbonna499@gmail.com
+                </a>
+
+                <!-- Email Contact Button -->
+                <a
+                    href="mailto:FevoObonna499@gmail.com"
+                    class="button">
+                    ✉️ Send Me an Email
+                </a>
+
+                <!-- WhatsApp Contact Button -->
+                <a
+                    href="https://wa.me/2347038339168"
+                    class="button whatsapp-button"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    💬 Chat with Me on WhatsApp
+                </a>
+            </div>
+
+            <p>
+                Whether you are a friend, a fellow learner,
+                or someone with an interesting idea,
+                you are welcome to get in touch.
+            </p>
+
+            <h3 style="margin-top: 25px;">Send Me a Message</h3>
+
+            <form id="contactForm">
+                <label for="name">Your Name</label>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your name"
+                    required
+                >
+
+                <label for="email">Your Email</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email address"
+                    required
+                >
+
+                <label for="message">Your Message</label>
+                <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Write your message here..."
+                    required
+                ></textarea>
+
+                <button type="submit" class="button">
+                    Send Message ✉
+                </button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Thank you for visiting my website! 🤎</p>
+
+        <p>
+            Made with <span>♥</span> by Favour Chidalu
+        </p>
+
+        <p>
+            DREAM <span>|</span> LEARN <span>|</span> GROW
+        </p>
+
+        <p>&copy; 2026 Favour Chidalu. All rights reserved.</p>
+    </footer>
+
+    <!-- CONTACT FORM BEHAVIOUR -->
+    <script>
+        const contactForm = document.getElementById("contactForm");
+
+        contactForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById("name").value.trim();
+            const senderEmail = document.getElementById("email").value.trim();
+            const message = document.getElementById("message").value.trim();
+
+            const subject = encodeURIComponent(
+                "Website message from " + name
+            );
+
+            const body = encodeURIComponent(
+                "Name: " + name +
+                "\nEmail: " + senderEmail +
+                "\n\nMessage:\n" + message
+            );
+
+            window.location.href =
+                "mailto:Favourogbonna499@gmail.com" +
+                "?subject=" + subject +
+                "&body=" + body;
+        });
+    </script>
+
+</body>
+</html>
